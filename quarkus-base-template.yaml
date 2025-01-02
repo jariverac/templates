@@ -49,13 +49,13 @@ spec:
           version: ${{ parameters.version }}
           package: ${{ parameters.package }}
           directory: ${{ parameters.package | replace('.', '/') }}
-#    - id: publish
-#      name: Publish
-#      action: publish:github
-#      input:
-#        allowedHosts: ['github.com']
-#        description: This is ${{ parameters.name }}
-#        repoUrl: ${{ parameters.repoUrl }}
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        allowedHosts: ['github.com']
+        description: This is ${{ parameters.name }}
+        repoUrl: ${{ parameters.repoUrl }}
 
     - id: register
       name: Register
