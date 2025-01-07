@@ -56,7 +56,7 @@ spec:
       input:
         remoteUrl: "https://jarivera0028@dev.azure.com/jarivera0028/jarivera/_git/redhat-developerhub"
         branch: "main"
-        token: "49BWoPysxSZTJFKl9wyS5VjXYpx8pa94Np0FX0WwQBd7kOL8SNhlJQQJ99BAACAAAAA3U1aZAAASAZDOUa2c"
+        token: "NDlCV29QeXN4U1pUSkZLbDl3eVM1VmpYWXB4OHBhOTROcDBGWDBXd1FCZDdrT0w4U05obEpRUUo5OUJBQUNBQUFBQTNVMWFaQUFBU0FaRE9VYTJj"
 #    - id: publish
 #      action: publish:azure
 #      name: Publish to Azure
