@@ -54,7 +54,7 @@ spec:
       action: azure:repo:clone
       name: Clone Azure Repo
       input:
-        remoteURL: 'https://jarivera0028@dev.azure.com/jarivera0028/jarivera/_git/redhat-developerhub'
+        remoteUrl: 'https://jarivera0028@dev.azure.com/jarivera0028/jarivera/_git/redhat-developerhub'
         branch: 'main'
         token: 'FHO9xEwNTGUdZXnP6LqllSwWPaQHSUS2tj8m0ifp3DuPEihEKRh2JQQJ99BAACAAAAA3U1aZAAASAZDO5DXW'
 #    - id: publish
