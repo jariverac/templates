@@ -37,6 +37,7 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+              - https://jarivera0028@dev.azure.com/jarivera0028/jarivera/_git/redhat-developerhub
   steps:
 #    - id: fetch-content
 #      name: Fetch Template
@@ -53,7 +54,7 @@ spec:
       action: azure:repo:clone
       name: Clone Azure Repo
       input:
-        remoteURL: https://jarivera0028@dev.azure.com/jarivera0028/jarivera/_git/redhat-developerhub
+        remoteURL: ${{ parameters.repoUrl }}
         branch: main
         token: FHO9xEwNTGUdZXnP6LqllSwWPaQHSUS2tj8m0ifp3DuPEihEKRh2JQQJ99BAACAAAAA3U1aZAAASAZDO5DXW
 #    - id: publish
