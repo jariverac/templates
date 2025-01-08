@@ -42,7 +42,7 @@ spec:
       name: Fetch Template
       action: fetch:template
       input:
-        url: https://github.com/esebs/backstage-templates/tree/main/quarkus-template/skeleton
+        url: https://github.com/jariverac/templates/tree/master/quarkus-base-template-github/skeleton
         values:
           groupId: ${{ parameters.groupId }}
           artifactId: ${{ parameters.artifactId }}
