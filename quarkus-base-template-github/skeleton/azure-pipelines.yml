@@ -1,0 +1,36 @@
+variables:
+
+  - name: mavenJDKVersion
+    value: $(maven_jdk_version)
+
+  - name: 'javaVersion'
+    value: $(java_version)
+
+  - name: 'openshiftConnectionService'
+    value: $(openshift_connection_service)
+
+  - name: 'namespace'
+    value: $(project)
+
+  - name: 'ocToken'
+    value: $(oc_token)
+
+  - name: 'openshiftServer'
+    value: $(openshift_server)
+
+resources:
+  repositories:
+    - repository: pipeline_template
+      type: git
+      name: devsecops-base-resources
+      ref: 'refs/heads/feature/quarkus'
+
+stages:
+  - template: quarkus/main-pipeline.yml@pipeline_template
+    parameters:
+      mavenJDKVersion: ${{variables.mavenJDKVersion}}
+      javaVersion: ${{variables.javaVersion}}
+      openshiftConnectionService: ${{ variables.openshiftConnectionService }}
+      namespace: ${{ variables.namespace }}
+      ocToken: ${{ variables.ocToken }}
+      openshiftServer: ${{ variables.openshiftServer }}
