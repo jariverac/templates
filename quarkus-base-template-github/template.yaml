@@ -55,8 +55,7 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: This is ${{ parameters.name }}
-        repoUrl: ${{ parameters.repoUrl }}
-        token: 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
+        repoUrl: ${{ parameters.repoUrl }}        
 
     - id: register
       name: Register
