@@ -54,7 +54,8 @@ spec:
       name: publish-azure
       action: publish:azure
       input:
-        repoUrl: 'dev.azure.com/jarivera0028/jarivera/_git/redhat-developerhub'
+        repoUrl: 'dev.azure.com?organization=jarivera0028&project=jarivera&repo=redhat-developerhub'
+        
 
     - id: publish
       name: Publish
