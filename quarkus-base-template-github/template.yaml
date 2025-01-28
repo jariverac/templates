@@ -50,11 +50,11 @@ spec:
           package: ${{ parameters.package }}
           directory: ${{ parameters.package | replace('.', '/') }}
     
-    - id: publish-azure
-      name: publish-azure
-      action: publish:azure
-      input:
-        repoUrl: 'dev.azure.com?organization=jarivera0028&project=jarivera&repo=redhat-developerhub'
+    #- id: publish-azure
+     # name: publish-azure
+      #action: publish:azure
+      #input:
+       # repoUrl: 'dev.azure.com?organization=jarivera0028&project=jarivera&repo=redhat-developerhub'
         
 
     - id: publish
