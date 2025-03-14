@@ -76,20 +76,20 @@ spec:
           version: ${{ parameters.version }}
           package: ${{ parameters.package }}
           directory: ${{ parameters.package | replace('.', '/') }}
-    - id: create-azure-repo
-      name: Create Azure Repository
-      action: azure:repo:create
-      input:
-        organization: ${{ parameters.organization }}
-        project: ${{ parameters.projectName }}
-        repoName: ${{ parameters.repoName }}
-        description: ${{ parameters.description }}
-        gitInitialize: true
-    #- id: publish-azure
-     # name: publish-azure
-      #action: publish:azure
+    #- id: create-azure-repo
+     # name: Create Azure Repository
+      #action: azure:repo:create
       #input:
-       # repoUrl: 'dev.azure.com?organization=jarivera0028&project=jarivera&repo=redhat-developerhub'
+       # organization: ${{ parameters.organization }}
+        #project: ${{ parameters.projectName }}
+        #repoName: ${{ parameters.repoName }}
+        #description: ${{ parameters.description }}
+        #gitInitialize: true
+    - id: publish
+      name: publish-azure
+      action: publish:azure
+      input:
+        repoUrl: 'dev.azure.com?organization=${{ parameters.organization }}&project=${{ parameters.projectName }}&repo=${{ parameters.repoName }}'
         
 
     #- id: publish
