@@ -76,17 +76,14 @@ spec:
           version: ${{ parameters.version }}
           package: ${{ parameters.package }}
           directory: ${{ parameters.package | replace('.', '/') }}
-    #- id: create-azure-repo
-     # name: Create Azure Repository
-      #action: azure:repo:create
-      #input:
-       # organization: ${{ parameters.organization }}
-        #project: ${{ parameters.projectName }}
-        #repoName: ${{ parameters.repoName }}
-        #description: ${{ parameters.description }}
-        #gitInitialize: true
+    
+    - id: write-workspace-directory
+      name: List the workspace directory
+      input:
+        listWorkspace: true
+
     - id: publish
-      name: publish-azure
+      name: Publish to Azure Repository
       action: publish:azure
       input:
         repoUrl: 'dev.azure.com?organization=${{ parameters.organization }}&project=${{ parameters.projectName }}&repo=${{ parameters.repoName }}'
